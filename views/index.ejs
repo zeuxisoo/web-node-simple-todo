@@ -1,0 +1,43 @@
+<div class="box">
+	<% if (message.success.length > 0) { %>
+		<div class="box success"><%= message.success %></div>
+	<% } %>
+
+	<% if (message.error.length > 0) { %>
+		<div class="box error"><%= message.error %></div>
+	<% } %>
+
+	<div class="box todos">
+		<h2 class="box">待辦事項</h2>
+		<ul>
+			<% todos.forEach(function(todo) { %>
+				<li>
+					<% if (todo.status == false) { %>
+						<%= todo.topic %>
+					<% }else{ %>
+						<del><%= todo.topic %></del>
+					<% } %>
+					&nbsp;
+				
+					<% if (todo.status == false) { %>
+						<a href="/finish/<%= todo.id %>">完成</a>,
+					<% }else{ %>
+						<a href="/unfinish/<%= todo.id %>">恢復</a>,
+					<% } %>
+				
+					<a href="/edit/<%= todo.id %>">編輯</a>,
+					<a href="/delete/<%= todo.id %>" onclick="return confirm('刪除以後不能還原,你確定嗎?')">刪除</a>
+				</li>
+			<% }) %>
+		</ul>
+	</div>
+
+	<div class="box post">
+		<h2>新增</h2>
+		<form action="/new" method="post" id="post_new">
+		<input type="hidden" name="csrf" value="<%= csrf %>" />
+			<p><input type="text" name="name" class="long_txt" /></p>
+			<p><input type="submit" class="submit" value="添加" /></p>
+		</form>
+	</div>
+</div>

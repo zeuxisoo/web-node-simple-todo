@@ -1,0 +1,11 @@
+.DS_Store
+.*~
+*.php
+*.sqlite
+node_modules/bin
+node_modules/date-utils
+node_modules/ejs
+node_modules/express
+node_modules/express-csrf
+node_modules/sqlite3
+node_modules/.bin

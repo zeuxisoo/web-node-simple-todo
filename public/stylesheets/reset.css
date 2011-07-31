@@ -1,0 +1,48 @@
+body, h1, h2, h3, h4, h5, h6, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre,
+fieldset, lengend, button, input, textarea,
+th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button, input, select, textarea {
+    font: 14px/1.5  Arial, sans-serif;
+    padding:3px;
+}
+input { line-height:normal; }
+h1 { font-size:24px; }
+h2 { font-size:20px; }
+h3 { font-size:18px; }
+h4 { font-size:18px; }
+h5 { font-size:14px; }
+h1, h2, h3, h4, h5 { font-weight:normal; }
+
+address, cite, dfn, em, var { font-style: normal; }
+small { font-size: 11px; }
+
+a { color:#03C; }
+a:hover { color:#F30; }
+
+abbr[title], acronym[title] {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+legend { color: #000; }
+fieldset, img { border: none; }
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html { overflow-y: scroll; }
