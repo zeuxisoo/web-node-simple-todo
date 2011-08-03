@@ -1,5 +1,5 @@
 var express = require('express'),
-	csrf = require('express-csrf'),
+	csrf = require('./library/express-csrf.js'),
 	config = require('./config'),
 	todo = require('./controllers/todo');
 
