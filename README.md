@@ -4,6 +4,10 @@ Copyright
 
 	BY: Attribution, NC: NonCommercial, SA: ShareAlike
 
+Install Dependencies
+
+	npm install
+
 Create Database
 
 	DROP TABLE IF EXISTS "todo";
@@ -15,3 +19,7 @@ Create Database
 		PRIMARY KEY (id), 
 		CHECK (status IN (0, 1))
 	);
+	
+Start Application
+
+	node app.js
